@@ -50,7 +50,7 @@ def append_data_to_xlsx(target_file, data):
     start_col = sheet.max_column + 1
 
     # Write the data starting from row 5
-    start_row = 4
+    start_row = 5
 
     for row_index, row in enumerate(data, start=start_row):
         for col_index, value in enumerate(row, start=start_col):
@@ -59,24 +59,24 @@ def append_data_to_xlsx(target_file, data):
     workbook.save(target_file)
 
 if __name__ == "__main__":
-    source_file = ""
-    sheet_name = ""
-    target_file = ""
+    source_file = "./F204RPM.xlsx"
+    sheet_name = "100b"
+    target_file = "./Book1.xlsx"
 
     # Columns to extract
     columns_to_extract = [
         "Core 2 VID [V]", 
         "Core 2 T0 Usage [%]", 
         "Core 2 T1 Usage [%]", 
-        "Core 2 [ºC]"
+        "Core 2 [°C]",
         "Core 25 VID [V]", 
         "Core 25 T0 Usage [%]", 
         "Core 25 T1 Usage [%]", 
-        "Core 25 [ºC]"
+        "Core 25 [°C]",
         "Core 6 VID [V]", 
         "Core 6 T0 Usage [%]", 
         "Core 6 T1 Usage [%]", 
-        "Core 6 [ºC]"
+        "Core 6 [°C]"
     ]
 
     # Read specific columns from the source file
